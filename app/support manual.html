@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel de Support Technique</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #6a5acd; /* Violet color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header img {
+            max-width: 300px; /* Adjust logo size */
+            margin-bottom: 10px;
+        }
+        h1 {
+            margin: 0;
+            transition: text-shadow 0.3s ease;
+        }
+        h1:hover {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #4b0082; /* Dark purple */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            color: white; /* Change text color to white */
+        }
+        .sidebar h2 {
+            color: #e6e6fa; /* Light lavender for the header */
+        }
+        .subtitle {
+            cursor: pointer;
+            color: #e6e6fa; /* Light lavender for subtitles */
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .subtitle:hover {
+            text-decoration: underline;
+            box-shadow: 0 4px 8px rgba(106, 92, 205, 0.5);
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+        .content {
+            width: 50%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Added rounded edges */
+            overflow: auto;
+        }
+        video {
+            width: 300px; /* Set a fixed width */
+            height: auto; /* Height will adjust automatically */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="Logo_Teletic_Italic.png" alt="Logo"> <!-- Replace with your logo file -->
+    <h1>Manuel de Support Technique</h1>
+</header>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>Problèmes</h2>
+        <div class="subtitle" onclick="openVideo('video1.mp4')">L'application ne fonctionne pas</div>
+        <div class="subtitle" onclick="openVideo('video2.mp4')">L'application ne fonctionne pas</div>
+        <div class="subtitle" onclick="openVideo('video3.mp4')">Cette offre est activée manuellement</div>
+        <div class="subtitle" onclick="openVideo('video4.mp4')">Toutes les transactions ne fonctionnent pas</div>
+    </div>
+    <div class="content" id="videoContent">
+        <h2>Bienvenue dans le Manuel de Support</h2>
+        <p>Utilisez le menu latéral pour naviguer à travers les différents problèmes rencontrés.</p>
+    </div>
+</div>
+
+<script>
+    function openVideo(videoFile) {
+        const contentDiv = document.getElementById('videoContent');
+        contentDiv.innerHTML = `<video controls><source src="${videoFile}" type="video/mp4">Votre navigateur ne supporte pas la vidéo.</video>`;
+    }
+</script>
+
+</body>
+</html>
